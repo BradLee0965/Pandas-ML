@@ -8,7 +8,7 @@ import pandas as pd
 
 import csv
 
-df = pd.read_csv('/Users/Lee/Desktop/python/GitHub/sideproject/AAPL_Historical_Data.csv')
+df = pd.read_csv('/Users/Lee/Desktop/GitHub/sideproject-2/AAPL_Historical_Data.csv')
 
 print(df.shape) # 열과 행의 개수 확인
 print(df.head()) # Dataframe 상의 5개 추출
@@ -28,3 +28,6 @@ print('조건 주기 주가가 100달러 이상인 것만 추출\n', df[df['Pric
 print('\'Price\' 총합 확인 :', df['Price'].sum()) # 가격의 총 합
 print('평균값 확인 : \n', df.describe().mean())
 print('\'Price\' 값 리스트로 나열 :', df['Price'].unique())
+
+print('@@@@@@@@@@@@'*20)
+
