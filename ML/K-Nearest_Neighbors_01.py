@@ -53,3 +53,13 @@ kn49.fit(fish_data, fish_target)
 
 print(kn49.score(fish_data, fish_target)) # 이때의 성능은 35(도미 데이터)/ 49(전체 데이터) 이다 
 print(35/49)
+
+print('------')
+
+# n_neighbors 변경 했을때 언제 정확도가 1 아래로 떨어지는지 확인 하는 코드
+for n in range(5,50) :
+    kn.n_neighbors = n
+    score = kn.score(fish_data, fish_target)
+    if score < 1 :
+        print(n, score)
+        
